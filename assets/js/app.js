@@ -23,7 +23,7 @@ function checkBalance() {
 }
 
 function deposit() {
-  let amount = parseFloat(prompt("Enter amount to deposit:"));
+  let amount = +prompt("Enter amount to deposit:");
   if (amount > 0) {
     balance += amount;
     alert(`Deposited $${amount}. New balance: $${balance}`);
@@ -33,7 +33,7 @@ function deposit() {
 }
 
 function withdraw() {
-  let amount = parseFloat(prompt("Enter amount to withdraw:"));
+  let amount = +prompt("Enter amount to withdraw:");
   if (amount > 0 && amount <= balance) {
     balance -= amount;
     alert(`Withdrawn $${amount}. Remaining balance: $${balance}`);
